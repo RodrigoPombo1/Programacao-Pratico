@@ -42,5 +42,5 @@ int main() {
     if (check_prime(b) && check_pernicious(b)) {
             cout << b;
         }
-    return 1;
+    return 0;
 }
