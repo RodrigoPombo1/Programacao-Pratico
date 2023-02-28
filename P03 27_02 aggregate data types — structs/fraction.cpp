@@ -21,8 +21,9 @@ fraction make_irreductible(fraction res) {
 
 fraction add(fraction a, fraction b) {
     a.num *= b.den;
+    int aux = a.den;
     a.den *= b.den;
-    b.num *= a.den;
+    b.num *= aux;
     fraction res;
     res.num = a.num + b.num;
     res.den = a.den;
@@ -39,5 +40,7 @@ fraction mul(fraction a, fraction b) {
 }
 
 int main() {
+    fraction a { 1, 1 }, b { -1, 2};
+    cout << add(a,b) << ' ' << mul(a,b) << '\n';
     return 0;
 }
